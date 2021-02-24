@@ -2,13 +2,7 @@
 import pymysql
 
 from special_function.logging_tool import logging_put
-
-host='10.0.0.3'
-port=3306
-user='user'
-password='18135165419bW'
-database='qqrobot'
-
+from mysql.connect_info import *
 
 #增加信息：往数据库中增加quest和reply
 def addInfo(quest,reply):

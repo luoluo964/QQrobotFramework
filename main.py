@@ -1,8 +1,10 @@
 # coding=utf-8
+import socket
+
 import  socket_operate.server
 import  handle.main_handle
 from special_function.logging_tool import logging_put
-import socket
+
 
 def main():
     while 1:

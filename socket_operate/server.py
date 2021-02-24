@@ -10,7 +10,7 @@ from special_function.logging_tool import logging_put
 ##定义socket类型，网络通信，TCP
 ListenSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #套接字绑定的IP与端口
-ListenSocket.bind(('10.0.0.3', 5701))
+ListenSocket.bind(('马赛克', 5701))
 #开始TCP监听
 ListenSocket.listen(100)
 
@@ -32,7 +32,6 @@ def json_to_info(msg):
 def rev_msg():
     #接受TCP连接，并返回新的套接字与IP地址
     conn, addr = ListenSocket.accept() 
-    logging_put(addr)
 
     #接收数据解码（接收到的是string形式的json）
     data = conn.recv(10240).decode(encoding='utf-8')

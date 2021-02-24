@@ -1,14 +1,16 @@
 # coding=utf-8
 #在5700端口的角度上，我们是发送消息的客户端
 import socket
+import json 
 
+
+ip='马赛克'
 
 #通过发送http请求让傀儡QQ发送消息
 #在参数resp_dict中，我们要指定好类型、回复信息、账号（群号）
 def send_msg(resp_dict):
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    ip='10.0.0.3'
     client.connect((ip,5700))
 
     msg_type=resp_dict['msg_type']  #回复类型（群聊/私聊）

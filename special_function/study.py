@@ -1,5 +1,5 @@
 # coding=utf-8
-from mysql.operate import findInfo,addInfo
+from mysql.operate_words import findInfo,addInfo
 import random
 
 #学习消息
@@ -17,9 +17,7 @@ def get_reply(quest):
     res=None
     #长度小于90才有必要查找
     if len(quest)<90:
-        res=findInfo(quest)
-    else:
-        print("超过90的字符串不会存储在数据库中的")        
+        res=findInfo(quest)       
     #没有找到结果
     if not res:
         return ''

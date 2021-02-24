@@ -15,9 +15,6 @@ def get_number(msg):
         return msg['group_id']
     elif get_message_type(msg) == 'private':
         return msg['user_id']
-    else:
-        print('出错啦！找不到群号/QQ号')
-        exit()
 
 # 获取信息发送者的QQ号
 def get_user_id(msg):
@@ -27,9 +24,14 @@ def get_user_id(msg):
 def get_raw_message(msg):
     return msg['raw_message']
 
+#改变发送的信息
+def set_raw_message(msg,new_info):
+    msg['raw_message']=new_info
 
 
-
+#得到通知类型
+def get_notice_type(msg):
+    return msg['notice_type']
 
 
 
