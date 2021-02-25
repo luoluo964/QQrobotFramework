@@ -75,7 +75,7 @@ def life_skill_sub():
 def kaoyan_sub():
     year = datetime.now().year
     #构造一个专将来的时间属
-    future = datetime.strptime(year+'-12-24 08:00:00','%Y-%m-%d %H:%M:%S')
+    future = datetime.strptime(str(year)+'-12-24 08:00:00','%Y-%m-%d %H:%M:%S')
     #当前时间
     now = datetime.now()
     #求时间差
@@ -92,7 +92,7 @@ def kaoyan_sub():
 
     #有内容
     if word!="" and word!="励什么志，你这辈子完蛋了" and picture!="" and picture!="哼，不给你看":
-        content="[CQ:face,id=69]考研倒计时：\n\n"+"距离"+year+"年考研还有"+days+"天\n\n"+word+"\n"+picture
+        content="[CQ:face,id=69]考研倒计时：\n\n"+"距离"+str(year)+"年考研还有"+str(days)+"天\n\n"+word+"\n"+picture
         return content
     return ""    
 
